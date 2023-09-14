@@ -32,7 +32,7 @@ const booksearch = ({ add_books }) => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div>
-        <nav className="pt-4 flex flex-row h-auto w-full justify-between items-center">
+        <nav className="pt-4 flex flex-col gap-y-4 sm:flex-row h-auto w-full justify-between items-center">
           <ul className="flex flex-col gap-4 w-full justify-center items-center">
             <h2 className="font-bold text-xl">Search by Book name :</h2>
             <input
@@ -54,8 +54,8 @@ const booksearch = ({ add_books }) => {
         </nav>
       </div>
 
-      <div className="mt-14 h-auto w-full">
-        <div className="px-56 pt-10 grid grid-cols-3 gap-8">
+      <div className="mt-14 h-auto w-full flex justify-center">
+        <div className="md:px-12 lg:px-20 xl:px-40 2xl:px-56 pt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {result &&
             result.map((element) => {
               return (

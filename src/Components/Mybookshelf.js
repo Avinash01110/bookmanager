@@ -16,8 +16,8 @@ const Mybookshelf = (props) => {
           <h2 className="font-bold text-2xl">My BookShelf</h2>
         </div>
 
-        <div className="mt-14 h-screen w-full">
-          <div className="px-56 pt-10 grid grid-cols-3 gap-8">
+        <div className="mt-14 h-auto w-full flex justify-center">
+          <div className="md:px-12 lg:px-20 xl:px-40 2xl:px-56 pt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mybookshelf &&
               mybookshelf.map((element, index) => {
                 return (
