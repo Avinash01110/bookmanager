@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MetaTags from "react-meta-tags";
 
 // Green color : #003d29
 
@@ -31,13 +32,18 @@ const booksearch = ({ add_books }) => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
+      <MetaTags>
+        <title>Book Manager - Search page</title>
+        <meta name="description" content="Some description." />
+        <meta property="og:title" content="Book Manager - Search page" />
+      </MetaTags>
       <div>
         <nav className="pt-4 flex flex-col gap-y-4 sm:flex-row h-auto w-full justify-between items-center">
           <ul className="flex flex-col gap-4 w-full justify-center items-center">
             <h2 className="font-bold text-xl">Search by Book name :</h2>
             <input
               onChange={handleOnChange}
-              className="pl-4 pb-1 h-8 w-72 rounded-full font-light border-[#003d29] border-2"
+              className="px-4 pb-1 h-8 w-72 rounded-full font-light border-[#003d29] border-2"
               type="search"
               name="search"
               id="search"

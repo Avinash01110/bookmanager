@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MetaTags from 'react-meta-tags';
 
 const Mybookshelf = (props) => {
   const [mybookshelf, setMybookshelf] = useState([]);
@@ -12,6 +13,11 @@ const Mybookshelf = (props) => {
   return (
     <>
       <div className="bg-gray-100 min-h-screen">
+      <MetaTags>
+        <title>Book Manager - My Book shelf</title>
+        <meta name="description" content="Some description." />
+        <meta property="og:title" content="Book Manager - My Book shelf" />
+      </MetaTags>
         <div className="flex justify-center items-center pt-8">
           <h2 className="font-bold text-2xl">My BookShelf</h2>
         </div>
